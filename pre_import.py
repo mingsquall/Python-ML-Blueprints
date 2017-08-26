@@ -12,10 +12,10 @@ plt.style.use('ggplot')
 PATH = r'/Users/patientman/Desktop/iris'
 r = requests.get('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data')
 # 准备数据文件
-with open(PATH + 'iris.data', 'w') as f:
+with open(PATH + '/iris.data', 'w') as f:
     f.write(r.text)
 os.chdir(PATH)
 # 读取CSV数据文件，并增加列名，生成DataFrame
-df = pd.read_csv(PATH + 'iris.data', names=['sepal length', 'sepal width', 'petal length', 'petal width', 'class'])
+df = pd.read_csv(PATH + '/iris.data', names=['sepal length', 'sepal width', 'petal length', 'petal width', 'class'])
 
 import seaborn as sns
